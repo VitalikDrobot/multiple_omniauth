@@ -1,0 +1,33 @@
+require 'rails_helper'
+
+feature 'Authentication' do
+  context 'with valid hash' do
+    before(:each) do
+      OmniAuth.config.mock_auth[:vkontakte] = OmniAuth::AuthHash.new(
+        provider: 'vkontakte',
+        uid: '12345',
+        info: { email: 'fakeemail@mail.com' }
+      )
+      visit login_path
+      click_link 'Login via Vkontakte'
+    end
+
+    scenario 'user login' do
+      expect(page).to have_content('Logout')
+    end
+
+    scenario 'user logout' do
+      click_link 'Logout'
+      expect(page).to_not have_content('Logout')
+    end
+  end
+
+  context 'with invalid hash' do
+    scenario 'user login' do
+      OmniAuth.config.mock_auth[:vkontakte] = :invalid_credentials
+      visit login_path
+      click_link 'Login via Vkontakte'
+      expect(page).to_not have_content('Logout')
+    end
+  end
+end
