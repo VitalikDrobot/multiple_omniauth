@@ -35,6 +35,9 @@ gem 'omniauth'
 gem 'omniauth-vkontakte'
 gem 'capybara'
 
+gem 'rollbar'
+gem 'rubocop', require: false
+
 gem 'rails_12factor', group: :production
 
 group :development, :test do
