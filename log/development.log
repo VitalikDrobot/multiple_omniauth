@@ -665,3 +665,80 @@ Processing by SessionsController#new as HTML
 Completed 200 OK in 58ms (Views: 56.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for 127.0.0.1 at 2016-12-08 23:12:41 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 210ms (Views: 189.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-08 23:12:42 +0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/vkontakte" for 127.0.0.1 at 2016-12-08 23:12:44 +0200
+Started GET "/auth/vkontakte" for 127.0.0.1 at 2016-12-08 23:13:21 +0200
+Started GET "/auth/vkontakte/callback?code=b2b89efe5e5ff3e16e&state=ac7c5460907840a01ef0971de48c9c1eba4bdc69046b550e" for 127.0.0.1 at 2016-12-08 23:13:22 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"b2b89efe5e5ff3e16e", "state"=>"ac7c5460907840a01ef0971de48c9c1eba4bdc69046b550e", "provider"=>"vkontakte"}
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."uid" = ? AND "accounts"."provider" = ? LIMIT ?[0m  [["uid", "30630986"], ["provider", "vkontakte"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 16ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-08 23:13:23 +0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered sessions/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2016-12-08 23:13:25 +0200
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-08 23:13:25 +0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/vkontakte" for 127.0.0.1 at 2016-12-08 23:13:26 +0200
+Started GET "/auth/vkontakte" for 127.0.0.1 at 2016-12-08 23:13:27 +0200
+Started GET "/auth/vkontakte/callback?code=d0d4e0f4ddba19ed31&state=992d815aaef151862fd89fcd535da2e481b01a33b6c056a3" for 127.0.0.1 at 2016-12-08 23:13:27 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"d0d4e0f4ddba19ed31", "state"=>"992d815aaef151862fd89fcd535da2e481b01a33b6c056a3", "provider"=>"vkontakte"}
+  [1m[36mAccount Load (0.3ms)[0m  [1m[34mSELECT  "accounts".* FROM "accounts" WHERE "accounts"."uid" = ? AND "accounts"."provider" = ? LIMIT ?[0m  [["uid", "30630986"], ["provider", "vkontakte"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-08 23:13:27 +0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered sessions/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/logout" for 127.0.0.1 at 2016-12-08 23:13:29 +0200
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-08 23:13:29 +0200
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms)
+
+
