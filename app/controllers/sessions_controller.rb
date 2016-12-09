@@ -23,5 +23,4 @@ class SessionsController < ApplicationController
 	def auth_params
 		request.env['omniauth.auth']
 	end
-
 end
