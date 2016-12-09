@@ -3,6 +3,7 @@ class SessionsController < ApplicationController
 	def new
 	end
 
+
 	def create
 		@account = Account.find_by(uid: auth_params['uid'], provider: auth_params['provider'])
 		unless @account
